@@ -40,6 +40,11 @@ In 2018, revenue was comparatively stable before the dataset showed a sharp **99
 ### Top Revenue Category
 **Health & Beauty** was the top revenue-generating product category, generating approximately **$1.4M in revenue** and accounting for **9.22% of total revenue**.
 
+The **top three product categories accounted for approximately 26% of total revenue**, indicating that revenue is distributed across a broad range of product categories rather than being dominated by a single category.
+1. Health & Beauty
+2. Watches & Gifts
+3. Bed, Bath & Table
+
 ### Customer Behavior
 The analysis identified **96,096 unique customers**, of which:
 - **2,997** were repeat customers
@@ -53,30 +58,31 @@ Customers were divided into three spending tiers using their total spending:
 - **Medium:** middle 60%
 - **High:** top 20%
 
-The segmentation was implemented using the SQL `NTILE(5)` window function.
+### Category Preferences by Spending Tier
 
-### Product Performance
-The analysis ranks the **top three products within each product category by revenue**, using the `ROW_NUMBER()` window function. This provides a category-level view of the products contributing most strongly to revenue.
+| Spending Tier | Leading Product Categories |
+|---|---|
+| **High** | Watches & Gifts, Health & Beauty, Sports & Leisure |
+| **Medium** | Bed, Bath & Table, Health & Beauty, Sports & Leisure |
+| **Low** | Telephony, Health & Beauty, Computer Accessories |
+
 
 ## Recommendations
 
-1. **Investigate the September 2018 revenue anomaly.**  
-   Validate whether the unusually low revenue is caused by incomplete data, reporting issues, or an actual business disruption.
+1. **Investigate the September 2018 revenue anomaly.** Confirm whether the sharp revenue decline is caused by incomplete data, reporting issues, or an actual business event before using it for strategic decision-making.
 
-2. **Improve customer retention.**  
-   With only **2,997 repeat customers compared with 93,099 first-time buyers**, Olist could focus on retention campaigns, personalized promotions, post-purchase engagement, and incentives for second purchases.
+2. **Strengthen customer retention initiatives.** Since most customers are one-time buyers, consider post-purchase campaigns, loyalty programs, personalized offers, and incentives designed to encourage repeat purchases.
 
-3. **Prioritize high-value customers.**  
-   Use the High spending tier to develop targeted loyalty programs and personalized offers designed to protect and increase customer lifetime value.
+3. **Develop targeted strategies for spending tiers.** Use customer spending segments to tailor promotions and product recommendations. High-tier customers may benefit from premium offers, while low- and medium-tier customers can be targeted with relevant category-based promotions.
 
-4. **Leverage Health & Beauty performance.**  
-   Since Health & Beauty contributes **9.22% of total revenue**, the category can be evaluated for opportunities to expand product assortment, cross-sell complementary products, and strengthen high-performing products.
+4. **Capitalize on Health & Beauty performance.** As the top revenue-generating category and a leading category across multiple spending tiers, Health & Beauty should be evaluated for opportunities to expand product offerings, improve cross-selling, and strengthen promotional activity.
 
-5. **Use category-level product rankings for inventory planning.**  
-   The top-three product analysis can support decisions around inventory availability, promotions, merchandising, and category management.
+5. **Use top-product rankings to support merchandising decisions.** The top three products within each category can guide inventory planning, promotions, product visibility, and category-level sales strategies.
 
-6. **Monitor revenue trends continuously.**  
-   Monthly revenue and MoM metrics should be incorporated into regular reporting to identify growth opportunities and unusual changes early.
+6. **Monitor revenue concentration across categories.** Since the top three categories account for approximately 26% of revenue, continue monitoring category performance to identify growth opportunities while maintaining a diversified revenue base.
+
+7. **Implement segment-based product recommendations.** Use the leading categories within each spending tier to improve personalization and recommend products that align with different customer spending behaviors.
+
 
 ## Tools & Skills
 
@@ -115,4 +121,5 @@ The analysis ranks the **top three products within each product category by reve
 | `q6_customer_spending_segmentation.sql` | SQL queries used to answer the business questions Q6 |
 | `q7_no_of_repeat_customers_vs_one_time_buyers.sql` | SQL queries used to answer the business questions Q7 |
 | `q8_top_product_category_by_revenue_pct.sql` | SQL queries used to answer the business questions Q8 |
+| `other_related_sqls.sql` | Additional SQL queries used in the analysis |
 
