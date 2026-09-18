@@ -123,3 +123,5 @@ Customers were divided into three spending tiers using their total spending:
 | `q8_top_product_category_by_revenue_pct.sql` | SQL queries used to answer the business questions Q8 |
 | `other_related_sqls.sql` | Additional SQL queries used in the analysis |
 
+## Data Source
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
